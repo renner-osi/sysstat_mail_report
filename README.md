@@ -1,3 +1,18 @@
+RHEL usage
+===================
+On RHEL:
+`sudo yum install -y  sysstat python36-devel gnuplot sendmail-devel optipng git`
+
+
+`systemctl start sysstat`
+`systemctl enable sysstat`
+
+git clone https://github.com/renner-osi/sysstat_mail_report.git
+
+python35 sysstat_mail_report/sysstat_report.py daily 'Sysstat renner@osi.io' 'rrenner@redhat.com'
+python36 sysstat_mail_report/sysstat_report.py daily 'Sysstat renner@osi.io' 'rrenner22@gmail.com'
+python36 sysstat_report.py daily 'Sysstat renner@osi.io' 'rrenner@redhat.com'
+
 Sysstat Mail Report
 ===================
 
@@ -20,7 +35,7 @@ This tool attempts to be simple and efficient and allow generating periodic repo
 * Automatically crunch images to save a few KB per email without any loss of quality
 * Optionally support SVG images for crisp looking graphs <sup>1</sup>
 
-<sup>1. SVG rendering has been tested successfully in Thunderbird and Geary email clients, but is not supported by GMail (as of 2015/09/07), and probably many other older clients. In case of doubt, use the default PNG + text fallback mode.</sup> 
+<sup>1. SVG rendering has been tested successfully in Thunderbird and Geary email clients, but is not supported by GMail (as of 2015/09/07), and probably many other older clients. In case of doubt, use the default PNG + text fallback mode.</sup>
 
 
 ## Graph examples
@@ -54,6 +69,14 @@ And of course [sysstat](http://sebastien.godard.pagesperso-orange.fr/).
 
 On Ubuntu and other Debian derivatives, you can install all of them with:  
 `sudo apt-get install sysstat python3 gnuplot-nox sendmail-bin optipng`
+
+
+On RHEL:
+`sudo yum install -y  sysstat python36-devel gnuplot sendmail-devel optipng`
+
+
+`systemctl start sysstat`
+`systemctl enable sysstat`
 
 
 ## Installation

@@ -171,9 +171,9 @@ class SysstatData:
     self.report_type = report_type
     self.sa_filepaths = []
     today = datetime.date.today()
-    filepath_format_dd = "/var/log/sysstat/sa%d"
-    filepath_format_subdir = "/var/log/sysstat/%Y%m/sa%d"
-    filepath_format_yyyymmdd = "/var/log/sysstat/sa%Y%m%d"
+    filepath_format_dd = "/var/log/sa/sa%d"
+    filepath_format_subdir = "/var/log/sa/%Y%m/sa%d"
+    filepath_format_yyyymmdd = "/var/log/sa/sa%Y%m%d"
 
     if report_type is ReportType.DAILY:
       date = today - datetime.timedelta(days=1)
